@@ -8,6 +8,8 @@ const AppointmentData = require('./appointmentData.json');
 const PractitionerData = require('./practitionerData.json');
 const ServiceData = require('./serviceData.json');
 const ReviewData = require('./reviewData.json');
+const RoleData = require('./roleData.json');
+
 
 
 
@@ -18,6 +20,8 @@ db.once('open', async () => {
   await cleanDB('Practitioner', 'practitioners');
   await cleanDB('Service', 'services');
    await cleanDB('Review', 'reviews');
+    await cleanDB('Role', 'roles');
+
 
 
   await User.insertMany(UserData);
@@ -25,6 +29,7 @@ db.once('open', async () => {
   await Practitioner.insertMany(PractitionerData);
   await Service.insertMany(ServiceData);
   await Review.insertMany(ReviewData);
+  await Role.insertMany(roleData);
 
 
   console.log('All data seeded!');
