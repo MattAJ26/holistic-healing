@@ -1,0 +1,43 @@
+[
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4567",
+    "practitioner": "64c7c3082b0bfc9c9f8b4568",
+    "appointment": "64c7c92b2f92b0bfc9f8b4561",
+    "rating": 5,
+    "comment": "Amazing energy healing session! Felt relaxed and rejuvenated."
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4568",
+    "practitioner": "64c7c3082b0bfc9c9f8b4569",
+    "appointment": "64c7c92b2f92b0bfc9f8b4562",
+    "rating": 4,
+    "comment": "Great massage, but the session started 10 minutes late."
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4569",
+    "practitioner": "64c7c3082b0bfc9c9f8b4567",
+    "appointment": "64c7c92b2f92b0bfc9f8b4563",
+    "rating": 3,
+    "comment": "The session was decent, but I expected more personalized guidance."
+   
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b456a",
+    "practitioner": "64c7c3082b0bfc9c9f8b4568",
+    "appointment": "64c7c92b2f92b0bfc9f8b4564",
+    "rating": 5,
+    "comment": "Deep tissue massage was exactly what I needed for my back pain!"  
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b456b",
+    "practitioner": "64c7c3082b0bfc9c9f8b4569",
+    "appointment": "64c7c92b2f92b0bfc9f8b4565",
+    "rating": 4,
+    "comment": "Reiki healing was calming, but the room was a bit cold."
+    
+  }
+]

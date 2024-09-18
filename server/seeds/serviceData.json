@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Deep Meditation Session",
+    "description": "A 60-minute guided meditation session for relaxation and mindfulness.",
+    "duration": 60,
+    "price": 50.00,
+    "practitioners": []
+  },
+  
+  {
+    "name": "Reiki Healing",
+    "description": "A 45-minute Reiki session to balance energy flow and relieve stress.",
+    "duration": 45,
+    "price": 80.00,
+    "practitioners": []
+  }
+]
