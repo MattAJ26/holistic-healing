@@ -1,13 +1,14 @@
 const db = require('../config/connection');
-const { Tech } = require('../models');
+const { User, Appointment, Practitioner, Service, Review } = require('../models');
 const cleanDB = require('./cleanDB');
 
-const techData = require('./techData.json');
+
+const UserData = require('./techData.json');
 
 db.once('open', async () => {
   await cleanDB('Tech', 'teches');
 
-  await Tech.insertMany(techData);
+  await User.insertMany(techData);
 
   console.log('Technologies seeded!');
   process.exit(0);

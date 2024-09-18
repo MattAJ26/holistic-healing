@@ -1,4 +1,9 @@
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
+const User = require('./User');
+const Appointment = require('./Appointment');
+const Practitioner = require('./Practitioner');
+const Service = require('./Service');
+const Review = require('./Review');
 
-module.exports = { Tech, Matchup };
+
+
+module.exports = { User, Appointment, Practitioner, Service, Review };
