@@ -1,0 +1,22 @@
+[
+  {
+    "username": "healingseeker01",
+    "email": "seeker01@example.com",
+    "password": "password123",
+    "roles": [] 
+  },
+
+  {
+    "username": "naturelover99",
+    "email": "lover99@example.com",
+    "password": "natureheal99",
+    "roles": []
+  },
+
+  {
+    "username": "meditationguru",
+    "email": "guru@example.com",
+    "password": "meditation2024",
+    "roles": ["Practitioner"]
+  }
+]

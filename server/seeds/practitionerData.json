@@ -1,0 +1,29 @@
+
+[
+  {
+    "name": "Dr. Zen Master",
+    "bio": "Specializes in holistic healing, meditation, and mindfulness practices.",
+    "specialties": ["Meditation", "Mindfulness", "Energy Healing"],
+    "certifications": ["Certified Holistic Healer", "Mindfulness Coach"],
+    "availableDates": [
+      "2024-09-20T10:00:00Z",
+      "2024-09-21T14:00:00Z"
+    ],
+    "ratings": []
+  },
+
+  {
+    "name": "Healing Hands Therapist",
+    "bio": "Offers physical therapy, Reiki, and aromatherapy for body and soul.",
+    "specialties": ["Reiki", "Physical Therapy", "Aromatherapy"],
+    "certifications": ["Licensed Physical Therapist", "Reiki Master"],
+    "availableDates": [
+      "2024-09-19T12:00:00Z",
+      "2024-09-22T09:00:00Z"
+    ],
+    "ratings": []
+  }
+
+]
+
+

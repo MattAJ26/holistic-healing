@@ -1,0 +1,41 @@
+[
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4567", 
+    "practitioner": "64c7c3082b0bfc9c9f8b4568", 
+    "appointmentDate": "2024-09-21T10:00:00.000Z", 
+    "status": "Scheduled", 
+    "notes": "First consultation for energy healing"
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4568", 
+    "practitioner": "64c7c3082b0bfc9c9f8b4569", 
+    "appointmentDate": "2024-09-22T14:00:00.000Z", 
+    "status": "Completed", 
+    "notes": "Follow-up session on chakra alignment"
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4569", 
+    "practitioner": "64c7c3082b0bfc9c9f8b4567", 
+    "appointmentDate": "2024-09-23T09:00:00.000Z", 
+    "status": "Cancelled", 
+    "notes": "Client cancelled due to personal reasons" 
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b456a", 
+    "practitioner": "64c7c3082b0bfc9c9f8b4568", 
+    "appointmentDate": "2024-09-24T11:00:00.000Z", 
+    "status": "Scheduled", 
+    "notes": "Session for deep tissue massage therapy" 
+  },
+
+  {
+    "user": "64c7c2f92b0bfc9c9f8b456b", 
+    "practitioner": "64c7c3082b0bfc9c9f8b4569", 
+    "appointmentDate": "2024-09-25T13:30:00.000Z", 
+    "status": "Scheduled", 
+    "notes": "Reiki healing for stress relief"  
+  }
+]
