@@ -1,9 +1,13 @@
-const typeDefs = `
+const { gql } = require('apollo-server');
+
+const typeDefs = gql`
+  scalar Date
+
   type Appointment {
     _id: ID
     user: User
     practitioner: Practitioner
-    appointmentDate: String
+    appointmentDate: Date!  # Use Date scalar type here
     status: String
     notes: String
   }
@@ -14,7 +18,7 @@ const typeDefs = `
     bio: String
     specialties: [String]
     certifications: [String]
-    availableDates: [String]
+    availableDates: [Date]  # If you want these as Date objects
     ratings: [Review]
   }
 
@@ -37,9 +41,9 @@ const typeDefs = `
     _id: ID
     name: String
     description: String
-    duration: Number
-    price: Number
-    practitioners: [Practitioners]
+    duration: Int!
+    price: Int!
+    practitioners: [Practitioner]
   }
 
   type User {
@@ -51,12 +55,14 @@ const typeDefs = `
   }
 
   type Query {
+    
     appointments: [Appointment]
     practitioners: [Practitioner]
     reviews: [Review]
     roles: [Role]
     services: [Service]
     users: [User]
+
     appointment(id: ID!): Appointment
     practitioner(id: ID!): Practitioner
     role(id: ID!): Role
@@ -65,9 +71,9 @@ const typeDefs = `
   }
 
   type Mutation {
-    addAppointment(appointmentDate: Date!, notes: String!): Appointment
-    addReview(rating: Number!, comment: String): Review
-    addUser(username: String!,  email: String!, password:  String!): User
+    addAppointment(userId: ID!, practitionerId: ID!, appointmentDate: Date!, notes: String!): Appointment
+    addReview(rating: Int!, comment: String): Review
+    addUser(username: String!, email: String!, password: String!): User
   }
 `;
 

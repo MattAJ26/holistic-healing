@@ -15,10 +15,19 @@ const appointmentSchema = new Schema({
     ref: 'Practitioner',
     required: true,
   },
+
   appointmentDate: {
     type: Date,
     required: true,
-  },
+    validate: {
+        validator: function(value) {
+            return value > Date.now();
+        },
+        message: 'Appointment date must be in the future'
+    }
+},
+
+
   status: {
     type: String,
     enum: ['Scheduled', 'Completed', 'Cancelled'],
