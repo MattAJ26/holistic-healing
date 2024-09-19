@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User, Appointment, Practitioner, Service, Review } = require('../models');
+const { User, Appointment, Practitioner, Service, Review, Role } = require('../models');
 const cleanDB = require('./cleanDB');
 
 
@@ -25,11 +25,12 @@ db.once('open', async () => {
 
 
   await User.insertMany(UserData);
-  await Appointment.insertMany(AppointmentData);
   await Practitioner.insertMany(PractitionerData);
   await Service.insertMany(ServiceData);
+  await Appointment.insertMany(AppointmentData);
+   await Role.insertMany(RoleData);
   await Review.insertMany(ReviewData);
-  await Role.insertMany(roleData);
+ 
 
 
   console.log('All data seeded!');

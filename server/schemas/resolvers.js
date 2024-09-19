@@ -1,29 +1,114 @@
-const { Tech, Matchup } = require('../models');
+const { User, Appointment, Practitioner, Service, Review,Role } = require('../models');
 
 const resolvers = {
+  // query
+  // ----
   Query: {
-    tech: async () => {
-      return Tech.find({});
+
+    users: async () => {
+      return User.find({}).populate('roles');
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+
+   appointments: async () => {
+  return Appointment.find({}).populate('user').populate({
+    path: 'user',
+        populate: 'roles',
+  }).populate('practitioner').populate({
+    path: 'practitioner',
+    populate: 'ratings',
+  })
+    
+},
+
+services: async () => {
+  return Service.find({}).populate('practitioner')
+},
+
+roles: async () => {
+  return Role.find({});
+},
+
+reviews: async () => {
+  return Review.find({}).populate('practitioner').populate('service');
+},
+
+practitioners: async () => {
+  return Practitioner.find({}).populate('review').populate({
+    path: 'reviews',
+    populate: 'service',
+  });
+},
+
+
+// find data by id
+// ---------------
+appointment: async (parent, args) => {
+  return Appointment.findById(args.id)
+    .populate({
+      path: 'user',    
+      populate: {
+        path: 'roles', 
+      },
+    })
+    .populate('practitioner'); 
+},
+
+practitioner: async (parent, args) => {
+  return Practitioner.findById(args.id);
+},
+
+role: async (parent, args) => {
+  return Role.findById(args.id);
+},
+
+service: async (parent, args) => {
+  return Service.findById(args.id).populate('practitioners')
+},
+
+user: async (parent, args) => {
+  return User.findById(args.id).populate('roles')
+},
+
   },
+  // Mutation
+  // -------
+
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+     addAppointment: async (parent, {userId, practitionerId, appointmentDate, notes }) => {
+      const user = await User.findById(userId);
+            const practitioner = await Practitioner.findById(practitionerId);
+
+            if (!user || !practitioner) {
+                throw new Error('User or Practitioner not found');
+            }
+
+      // Create and return the new Appointment object
+      return await Appointment.create({ 
+        user: userId,
+        practitioner: practitionerId,
+        appointmentDate,
+        notes,
+        });
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+
+
+    addReview: async (parent, {rating, comment,}) => {
+      return await Review.create({
+        rating,
+        comment
+      })
     },
+
+    addUser: async (parent, {username,  email, password}) => {
+      return await User.create({
+      username,
+      email,
+      password
+      })
+    }
   },
+
+
 };
 
 module.exports = resolvers;

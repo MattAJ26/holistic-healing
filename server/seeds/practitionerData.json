@@ -6,8 +6,8 @@
     "specialties": ["Meditation", "Mindfulness", "Energy Healing"],
     "certifications": ["Certified Holistic Healer", "Mindfulness Coach"],
     "availableDates": [
-      "2024-09-20T10:00:00Z",
-      "2024-09-21T14:00:00Z"
+      "2024-12-20T10:00:00Z",
+      "2024-12-21T14:00:00Z"
     ],
     "ratings": []
   },
@@ -18,8 +18,8 @@
     "specialties": ["Reiki", "Physical Therapy", "Aromatherapy"],
     "certifications": ["Licensed Physical Therapist", "Reiki Master"],
     "availableDates": [
-      "2024-09-19T12:00:00Z",
-      "2024-09-22T09:00:00Z"
+      "2025-12-19T12:00:00Z",
+      "2025-12-22T09:00:00Z"
     ],
     "ratings": []
   }
