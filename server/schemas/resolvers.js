@@ -33,8 +33,8 @@ reviews: async () => {
 },
 
 practitioners: async () => {
-  return Practitioner.find({}).populate('review').populate({
-    path: 'reviews',
+  return Practitioner.find({}).populate('ratings').populate({
+    path: 'ratings',
     populate: 'service',
   });
 },
@@ -92,8 +92,10 @@ user: async (parent, args) => {
     },
 
 
-    addReview: async (parent, {rating, comment,}) => {
+    addReview: async (parent, {userId, rating, comment,}) => {
+      const user = await User.findById(userId);
       return await Review.create({
+        user: userId,
         rating,
         comment
       })
@@ -105,7 +107,13 @@ user: async (parent, args) => {
       email,
       password
       })
-    }
+    },
+
+
+    // update
+    // ------
+
+    
   },
 
 

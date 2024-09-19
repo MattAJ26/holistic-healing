@@ -5,12 +5,12 @@ const dateFormat = require('../utils/dateFormat');
 // -----------------
 
 const appointmentSchema = new Schema({
-  user: {
+  user:{
     type: Schema.Types.ObjectId,
     ref: 'User',
     required: true,
   },
-  practitioner: {
+  practitioner:{
     type: Schema.Types.ObjectId,
     ref: 'Practitioner',
     required: true,
