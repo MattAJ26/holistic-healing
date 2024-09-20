@@ -74,48 +74,118 @@ user: async (parent, args) => {
   // -------
 
   Mutation: {
-     addAppointment: async (parent, {userId, practitionerId, appointmentDate, notes }) => {
-      const user = await User.findById(userId);
-            const practitioner = await Practitioner.findById(practitionerId);
+     addAppointment: async (parent, {user, practitioner, appointmentDate, notes }) => {
+      const userData = await User.findOne({ _id: user
+      });
+            const practitionerData = await Practitioner.findOne({ _id: practitioner});
 
-            if (!user || !practitioner) {
+            if (!userData || !practitionerData) {
                 throw new Error('User or Practitioner not found');
             }
 
       // Create and return the new Appointment object
       return await Appointment.create({ 
-        user: userId,
-        practitioner: practitionerId,
+        user: userData,
+        practitioner: practitionerData,
         appointmentDate,
         notes,
         });
     },
 
 
-    addReview: async (parent, {userId, rating, comment,}) => {
-      const user = await User.findById(userId);
+    addReview: async (parent, {user, rating, comment,}) => {
+      const userData = await User.findOne({_id: user});
+      if (!userData) {
+                throw new Error('User not found');
+            }
+
       return await Review.create({
-        user: userId,
+        user: userData,
         rating,
         comment
       })
     },
 
-    addUser: async (parent, {username,  email, password}) => {
+    addUser: async (parent, {username, email, password}) => {
       return await User.create({
       username,
       email,
       password
       })
     },
-
+    
+    addService: async (parent, {name, description, duration, price}) => {
+      return await Service.create({
+      name, 
+      description, 
+      duration, 
+      price
+      })
+    },
 
     // update
     // ------
+    updateUser: async (parent, { id, username, email, password }) => {
+      // Find and update the matching class using the destructured args
+      return await User.findOneAndUpdate(
+        { _id: id }, 
+        { username, email, password  },
+        // Return the newly updated object instead of the original
+        { new: true }
+      );
+    },
+      updateAppointment: async (parent, { id, appointmentDate, notes }) => {
+      // Find and update the matching class using the destructured args
+      return await Appointment.findOneAndUpdate(
+        { _id: id }, 
+        { appointmentDate, notes  },
+        // Return the newly updated object instead of the original
+        { new: true }
+      );
+    },
 
+    updateReview: async (parent, { id, rating, comment }) => {
+      // Find and update the matching class using the destructured args
+      return await Review.findOneAndUpdate(
+        { _id: id }, 
+        { rating, comment},
+        // Return the newly updated object instead of the original
+        { new: true }
+      );
+    },
+
+     updateService: async (parent, { id, description, duration, price }) => {
+      // Find and update the matching class using the destructured args
+      return await Service.findOneAndUpdate(
+        { _id: id }, 
+        { description, duration, price},
+        // Return the newly updated object instead of the original
+        { new: true }
+      );
+    },
+
+
+    // delete
+    // -----
+
+    removeUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId });
+    },
+
+     cancelAppointment: async (parent, { appointmentId }) => {
+      return Appointment.findOneAndDelete({ _id: appointmentId });
+    },
     
-  },
+    deleteService: async (parent, { serviceId }) => {
+      return Service.findOneAndDelete({ _id: serviceId });
+    },
+    
 
+
+
+
+
+  },
 
 };
 
