@@ -17,10 +17,10 @@ const reviewSchema = new Schema({
     ref: 'Practitioner',
   },
 
-  service:{
+  service:[{
     type: Schema.Types.ObjectId,
     ref: 'Service',
-  }
+  }]
   ,
 
   rating: {

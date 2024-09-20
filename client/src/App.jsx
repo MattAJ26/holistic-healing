@@ -36,6 +36,7 @@ function App() {
       {/* <Headers /> */}
       <div className="flex-column justify-center align-center min-100-vh bg-primary">
         <Outlet />
+        <NavTabs/>
       </div>
     </ApolloProvider>
         </ChakraProvider>
