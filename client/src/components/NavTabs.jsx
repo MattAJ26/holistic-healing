@@ -1,49 +1,42 @@
-function NavTabs({ currentPage, handlePageChange }) {
-    return (
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <a
-            href="#home"
-            onClick={() => handlePageChange('Home')}
-            // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-            // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-            className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-          >
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#about"
-            onClick={() => handlePageChange('About')}
-            // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-          >
-            About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#blog"
-            onClick={() => handlePageChange('Blog')}
-            // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
-          >
-            Blog
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#contact"
-            onClick={() => handlePageChange('Contact')}
-            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    );
-  }
-  
-  export default NavTabs;
+import { color } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import './style/navtabs.css';
+
+export default function NavTabs({ links }) {
+  return (
+    // <nav className="navbar navbar-expand-lg bg-secondary" style={styles.navContainer}>
+    <nav className="navbar navbar-expand-lg bg-secondary" >
+      <div className="container-fluid">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="navbar-nav me-auto mb-2 mb-lg-0 navContainer">
+            <div className="rightHand navLink">
+                <div className="navLink">
+                  <Link to="/">Home</Link>
+                </div>
+                <div className="navLink">
+                  <Link to="/about">About Us</Link>
+                </div>
+                <div className="navLink">
+                  <Link to="/services">Services</Link>
+                </div>
+                <div className="navLink">
+                  <Link to="/contact">Contact</Link>
+                </div>
+            </div>
+            <div className="leftHand navLink">
+                <div className="navLink">
+                  <Link to="/signup">Sign Up</Link>
+                </div>
+                <div className="navLink">
+                  <Link to="/login">Login</Link>
+                </div>
+                <div className="navLink">
+                  <Link to="/logout">Logout</Link>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}

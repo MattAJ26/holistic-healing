@@ -1,0 +1,15 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    background: #2d3e50;
+    color: white,
+  }
+
+.navLink {
+    margin: 3px;
+    padding: 5px;
+    display: inline;
+    color: #cee7ea;
+  }
+
