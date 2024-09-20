@@ -8,6 +8,11 @@ import Home from './pages/Home';
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Signup from './pages/Signup.jsx';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +29,22 @@ const router = createBrowserRouter([
       }, {
         path: '/matchup/:id',
         element: <Vote />
-      },
+      }, {
+        path: '/about',
+        element: <About />
+      }, {
+        path: '/services',
+        element: <Services />
+      }, {
+        path: '/contact',
+        element: <Contact />
+      }, {
+        path: '/signup',
+        element: <Signup />
+      }, {
+        path: '/login',
+        element: <Login />
+      },  
     ],
   },
 ]);

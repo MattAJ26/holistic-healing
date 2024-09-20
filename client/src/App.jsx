@@ -5,8 +5,9 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 // chacckra ui settings
 // -------------------
 import { Box, ChakraProvider } from '@chakra-ui/react';
-import { extendTheme } from '@chakra-ui/react'
-import * as ReactDOM from 'react-dom/client'
+import { extendTheme } from '@chakra-ui/react';
+import * as ReactDOM from 'react-dom/client';
+import NavTabs from './components/NavTabs';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -34,9 +35,10 @@ function App() {
 
     <ApolloProvider client={client}>
       {/* <Headers /> */}
+      <NavTabs/>
       <div className="flex-column justify-center align-center min-100-vh bg-primary">
+        
         <Outlet />
-        <NavTabs/>
       </div>
     </ApolloProvider>
         </ChakraProvider>
