@@ -71,9 +71,38 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addAppointment(userId: ID!, practitionerId: ID!, appointmentDate: Date!, notes: String!): Appointment
-    addReview(rating: Int!, comment: String): Review
+
+ # create
+
+    addAppointment(user: ID!, practitioner: ID!, appointmentDate: Date!, notes: String!): Appointment
+    
+    addReview(user: ID!, rating: Int!, comment: String): Review
+
     addUser(username: String!, email: String!, password: String!): User
+
+     addService(name: String!, description: String!, duration: Int!, price: Int!): Service
+
+
+
+
+# update
+
+
+    updateUser(id: ID!, username: String!, email: String! password: String!): User
+
+    updateAppointment(id: ID!, appointmentDate: Date!, notes: String! ): Appointment
+
+     updateReview(id: ID!, rating: Int!, comment: String ): Review
+     
+       updateService(id: ID!, name: String!, description: String!, duration: Int!, price: Int! ): Service
+
+
+# delete
+
+removeUser(userId: ID!): User
+cancelAppointment(appointmentId: ID!): Appointment
+deleteService(serviceId: ID!): Service
+
   }
 `;
 

@@ -6,7 +6,7 @@ const dateFormat = require('../utils/dateFormat');
 // -------------
 
 const reviewSchema = new Schema({
-  user: {
+  user:{
     type: Schema.Types.ObjectId,
     ref: 'User',
     required: true,
@@ -17,11 +17,11 @@ const reviewSchema = new Schema({
     ref: 'Practitioner',
   },
 
-  service:[ {
+  service:{
     type: Schema.Types.ObjectId,
     ref: 'Service',
   }
-  ],
+  ,
 
   rating: {
     type: Number,
