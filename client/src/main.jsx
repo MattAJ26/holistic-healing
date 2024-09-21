@@ -5,8 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -23,12 +21,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
-      }, {
-        path: '/matchup',
-        element: <Matchup />
-      }, {
-        path: '/matchup/:id',
-        element: <Vote />
       }, {
         path: '/about',
         element: <About />
