@@ -10,10 +10,6 @@ const ServiceData = require('./serviceData.json');
 const ReviewData = require('./reviewData.json');
 const RoleData = require('./roleData.json');
 
-
-
-
-
 db.once('open', async () => {
   await cleanDB('User', 'users');
   await cleanDB('Appointment', 'appointments');
