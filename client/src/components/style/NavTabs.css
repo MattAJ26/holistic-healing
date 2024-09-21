@@ -3,13 +3,19 @@
     justify-content: space-between;
     margin: 0;
     background: #2d3e50;
-    color: white,
+    color: white;
+    font-size: 25px;
   }
 
 .navLink {
     margin: 3px;
-    padding: 5px;
+    padding: 10px;
     display: inline;
-    color: #cee7ea;
+    color: #D6D5C9;
   }
 
+.titleLink:hover {
+  text-decoration: none;
+  color: #D6D5C9;
+  opacity: 0.5;
+}

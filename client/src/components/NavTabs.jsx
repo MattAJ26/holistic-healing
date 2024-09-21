@@ -1,6 +1,6 @@
 import { color } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import './style/navtabs.css';
+import './style/NavTabs.css';
 
 export default function NavTabs({ links }) {
   return (
@@ -11,27 +11,27 @@ export default function NavTabs({ links }) {
           <div className="navbar-nav me-auto mb-2 mb-lg-0 navContainer">
             <div className="rightHand navLink">
                 <div className="navLink">
-                  <Link to="/">Home</Link>
+                  <Link className="titleLink" to="/">Home</Link>
                 </div>
                 <div className="navLink">
-                  <Link to="/about">About Us</Link>
+                  <Link className="titleLink" to="/about">About Us</Link>
                 </div>
                 <div className="navLink">
-                  <Link to="/services">Services</Link>
+                  <Link className="titleLink" to="/services">Services</Link>
                 </div>
                 <div className="navLink">
-                  <Link to="/contact">Contact</Link>
+                  <Link className="titleLink" to="/contact">Contact</Link>
                 </div>
             </div>
             <div className="leftHand navLink">
                 <div className="navLink">
-                  <Link to="/signup">Sign Up</Link>
+                  <Link className="titleLink" to="/signup">Sign Up</Link>
                 </div>
                 <div className="navLink">
-                  <Link to="/login">Login</Link>
+                  <Link className="titleLink" to="/login">Login</Link>
                 </div>
                 <div className="navLink">
-                  <Link to="/logout">Logout</Link>
+                  <Link className="titleLink" to="/logout">Logout</Link>
                 </div>
             </div>
           </div>
