@@ -25,7 +25,7 @@ const Home = () => {
       </div>
       <div className="card-body m-5">
         <h2>Services We Offer</h2>
-        <img class="photo"src={fzPhoto} width="33%" alt="foot zone Photo"></img>
+        <img className="photo"src={fzPhoto} width="33%" alt="foot zone Photo"></img>
         <p>
           The services we currently offer are Reiki and Foot Zone Therapy.
           <ul>
