@@ -17,14 +17,14 @@ export default function About() {
                 </div>
 
                 <div className="certifAbout">
-                    <h2>Certifications</h2>
+                    <h2 className="sectionTitle">Certifications</h2>
                     <p>
                       <ul>
-                          <h5>Reiki Certification:</h5>
+                          <h5>1. Reiki Certification:</h5>
                             <p className="p-3">
                               ICRT certified Master of Usui & Tibetan Reiki. Completed May 2019.
                             </p>
-                          <h5>Foot Zone Certification:</h5>
+                          <h5>2. Foot Zone Certification:</h5>
                             <p className="p-3">
                               Academy of Foot Zone Therapy certified Practitioner. Completed August 2014.
                             </p>
@@ -37,7 +37,7 @@ export default function About() {
               <div className="rightAbout">
                 <div className="card-body m-5">
 
-                  <h2>About Sabrina</h2>
+                  <h2 className="text-center pgTitle">About Sabrina</h2>
 
                   <p className="p-3 text">
                     I’m a born and raised Utahn, living from as far south as Payson up to Saratoga Springs. I’m the oldest out of three kids and have a daughter with my Husband. Some things that I enjoy are listening to audiobooks, going to places with my daughter, having late night philosophical discussions with my husband and playing fetch with my puppy in the evenings. 

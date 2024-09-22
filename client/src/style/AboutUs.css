@@ -2,6 +2,11 @@ h2 {
     padding-bottom: 40px;
 }
 
+h5 {
+    font-weight: 700;
+    font-style: italic;
+}
+
 .mainContainer {
     background-color: #d6d5c9;
     font-family: var(--chakra-fonts-body);
@@ -36,4 +41,8 @@ h2 {
 
 .text {
     font-size: 20px;
+}
+
+.sectionTitle {
+    font-weight: 500;
 }

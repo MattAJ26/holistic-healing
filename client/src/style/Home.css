@@ -1,0 +1,44 @@
+h2 {
+    font-weight: 500;
+}
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mainContainer {
+    background-color: #d6d5c9;
+    font-family: var(--chakra-fonts-body);
+    text-align: justify;
+
+}
+
+.about {
+    display: flex;
+}
+
+.oneThird {
+    flex: 1;
+    /* width: 35%; */
+}
+
+.twoThirds {
+    flex:2;
+    /* width: 65%; */
+}
+
+
