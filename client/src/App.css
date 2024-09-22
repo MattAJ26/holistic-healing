@@ -140,6 +140,8 @@ sup {
  */
 img {
   border-style: none;
+  border-radius: 10px;
+  box-shadow: none;
 }
 
 /* Forms
@@ -923,7 +925,9 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  /* background-color: #2d3e50 !important; */
+  /* background-color: #1b8445 !important; */
+  background: linear-gradient(180deg, #1b8445, #90b960);
 }
 
 .bg-info {
@@ -935,11 +939,13 @@ a:hover {
 }
 
 .bg-light {
-  background-color: #d9e9e8 !important;
+  /* background-color: #d9e9e8 !important; */
+  background-color: #d6d5c9;
 }
 
 .bg-dark {
-  background-color: #1a1a1a !important;
+  /* background-color: #1a1a1a !important; */
+  background-color: #2a78cb !important;
 }
 
 .bg-white {
@@ -1087,7 +1093,7 @@ a:hover {
 }
 
 .card {
-  border: 1px solid #1a1a1a;
+  /* border: 1px solid #1a1a1a; */
   margin-bottom: 1rem;
 }
 
@@ -1107,11 +1113,13 @@ a:hover {
 }
 
 .card.card-rounded {
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
+  border-radius: 0.4rem;
 }
 
 .card.card-rounded .card-header {
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  /* border-radius: 0.3rem 0.3rem 0 0; */
 }
 
 form {

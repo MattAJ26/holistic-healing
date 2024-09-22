@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
-    background: #2d3e50;
-    color: white;
+    /* background: #2d3e50; */
+    background: #1b8445;
+    color: #d6d5c9;
     font-size: 25px;
   }
 

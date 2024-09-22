@@ -1,0 +1,39 @@
+h2 {
+    padding-bottom: 40px;
+}
+
+.mainContainer {
+    background-color: #d6d5c9;
+    font-family: var(--chakra-fonts-body);
+}
+
+.contentAbout {
+    display: flex;
+}
+
+.leftAbout {
+    padding: 20px;
+    padding-top: 65px;
+    padding-left: 65px;
+}
+
+.photoAbout {
+    padding-bottom: 65px;
+    
+}
+
+.imgAbout {
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.photoTextAbout {
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 40px;
+}
+
+.text {
+    font-size: 20px;
+}
