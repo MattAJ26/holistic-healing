@@ -3,6 +3,7 @@
 // import { QUERY_MATCHUPS } from '../utils/queries';
 import logo from '../assets/business-logo.jpeg';
 import fzPhoto from '../assets/fz-photo.jpg';
+import Reviews from '../components/Reviews';
 
 const Home = () => {
   return (
@@ -19,10 +20,16 @@ const Home = () => {
         <p>
           At Eir of Renewal, we channel Eir’s legacy, offering a space for growth, healing, and personal evolution. Whether you are looking to restore balance in your life, explore new avenues of self-care, or simply find inspiration, our platform serves as your sanctuary of renewal.
         </p>
+        
         <p>
           Let the wisdom of Eir guide you as you embark on your own journey of restoration and rejuvenation.
         </p>
       </div>
+
+<Reviews />
+
+
+
       <div className="card-body m-5">
         <h2>Services We Offer</h2>
         <img className="photo"src={fzPhoto} width="33%" alt="foot zone Photo"></img>

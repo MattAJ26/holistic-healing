@@ -38,6 +38,7 @@ export const QUERY_SERVICES = gql`
       description
       price
       practitioners {
+        _id
         name
         ratings {
           _id
@@ -66,26 +67,21 @@ export const QUERY_SINGLE_ROLES = gql`
 export const QUERY_REVIEWS = gql`
   query getAllReviews {
     reviews {
+      _id
+      comment
+      createdAt
+      rating
       user {
         username
-        _id
-      }
-      practitioner {
-        _id
-        name
-        specialties
       }
       service {
-        _id
         name
-        duration
-        price
+        description
       }
-      rating
-      comment
     }
   }
 `;
+
 
 export const QUERY_PRACTITIONERS = gql`
   query getAllPractitioners {

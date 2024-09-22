@@ -42,6 +42,6 @@ const startApolloServer = async () => {
   });
 };
 
-// call of the function to run the server
+// call of the function to run the server .
 startApolloServer(); 
 
