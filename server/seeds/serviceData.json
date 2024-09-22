@@ -6,12 +6,67 @@
     "price": 50.00,
     "practitioners": []
   },
-  
   {
     "name": "Reiki Healing",
     "description": "A 45-minute Reiki session to balance energy flow and relieve stress.",
     "duration": 45,
     "price": 80.00,
+    "practitioners": []
+  },
+  {
+    "name": "Yoga Therapy",
+    "description": "A 90-minute yoga therapy session tailored to individual needs.",
+    "duration": 90,
+    "price": 100.00,
+    "practitioners": []
+  },
+  {
+    "name": "Acupuncture Treatment",
+    "description": "A 30-minute acupuncture session to relieve pain and restore balance.",
+    "duration": 30,
+    "price": 65.00,
+    "practitioners": []
+  },
+  {
+    "name": "Swedish Massage",
+    "description": "A 60-minute Swedish massage to relax muscles and improve circulation.",
+    "duration": 60,
+    "price": 120.00,
+    "practitioners": []
+  },
+  {
+    "name": "Chiropractic Adjustment",
+    "description": "A 20-minute chiropractic session for spinal alignment and pain relief.",
+    "duration": 20,
+    "price": 90.00,
+    "practitioners": []
+  },
+  {
+    "name": "Aromatherapy Facial",
+    "description": "A 50-minute facial using essential oils for a rejuvenating experience.",
+    "duration": 50,
+    "price": 110.00,
+    "practitioners": []
+  },
+  {
+    "name": "Hot Stone Massage",
+    "description": "A 75-minute massage with heated stones to ease tension and promote relaxation.",
+    "duration": 75,
+    "price": 150.00,
+    "practitioners": []
+  },
+  {
+    "name": "Life Coaching Session",
+    "description": "A 90-minute coaching session focused on personal and professional growth.",
+    "duration": 90,
+    "price": 200.00,
+    "practitioners": []
+  },
+  {
+    "name": "Nutritional Counseling",
+    "description": "A 60-minute session with a certified nutritionist to create a personalized meal plan.",
+    "duration": 60,
+    "price": 75.00,
     "practitioners": []
   }
 ]

@@ -1,23 +1,37 @@
 [
   {
-    "user": "64c7c2f92b0bfc9c9f8b4567",
-    "practitioner": "64c7c3082b0bfc9c9f8b4568",
+    "user": "64c7c2f92b0bfc9c9f8b4569",
+    "practitioner": "64c7c3082b0bfc9c9f8b4570",
     "service": [],
     "rating": 5,
-    "comment": "Amazing energy healing session! Felt relaxed and rejuvenated."
+    "comment": "Incredible foot zone therapy! My stress levels have dropped significantly."
   },
-
   {
-    "user": "64c7c2f92b0bfc9c9f8b4568",
-    "practitioner": "64c7c3082b0bfc9c9f8b4569",
-     "service": [],
+    "user": "64c7c2f92b0bfc9c9f8b4571",
+    "practitioner": "64c7c3082b0bfc9c9f8b4572",
+    "service": [],
+    "rating": 3,
+    "comment": "It was okay, but I expected more from the session."
+  },
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4573",
+    "practitioner": "64c7c3082b0bfc9c9f8b4574",
+    "service": [],
+    "rating": 5,
+    "comment": "A truly transformative experience! Highly recommend."
+  },
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4575",
+    "practitioner": "64c7c3082b0bfc9c9f8b4576",
+    "service": [],
     "rating": 4,
-    "comment": "satisfied."
+    "comment": "Very relaxing and soothing. I will definitely come back."
+  },
+  {
+    "user": "64c7c2f92b0bfc9c9f8b4577",
+    "practitioner": "64c7c3082b0bfc9c9f8b4578",
+    "service": [],
+    "rating": 5,
+    "comment": "Sabrina is a true healer! I left feeling revitalized."
   }
-
- 
-
-  }
-
-  
 ]
