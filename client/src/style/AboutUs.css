@@ -1,0 +1,6 @@
+.mainContainer {
+    /* background-color: #d6d5c9; */
+    background-color: red;
+    font-family: var(--chakra-fonts-body);
+}
+

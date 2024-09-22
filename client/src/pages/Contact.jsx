@@ -18,24 +18,42 @@ export default function Contact() {
                     <p className="center"><h4>Call Us:</h4></p>
                 </div>
 
-                  <p className="left">Monday - Fraiday</p>
-                  <p className="left">8:00am - 5:00pm</p>
-                  <p className="left">801-669-2282</p>
-                  
+                  <div className="infoContact">
+                    <div className="unicode-icon">&#10137;</div>
+                    
+                    <p className="left">  Monday - Fraiday</p>
+                  </div>
+
+                  <div className="infoContact">
+                    <div className="unicode-icon">&#10137;</div>
+                    {/* <span style='font-size:100px;'>&#128197;</span> */}
+                    <p className="left">8:00am - 5:00pm</p>
+                  </div>
+
+                  <div className="infoContact">
+                    <div className="unicode-icon">&#x2706;</div>
+                    <p className="left">+1 801-669-2282
+                    </p>
+                  </div>
+                 
               </div>
               <div className="emailContact">
                   <div  className="titleContact" >
-                        <p className="center">Mail Us:</p>
+                        <p className="center"><h4>Mail Us:</h4></p>
                   </div>
                   <div>
-                    <p className="left">sjenergydoula@gmail.com</p>
+                    <div className="infoContact">
+                      <div className="unicode-icon">&#128386;</div>
+                      <p className="left">sjenergydoula@gmail.com</p>
+                    </div>
+
                   </div>
                   
               </div>
         </div>
-        <div className="appointmentContact">
-            <p className="left">Book an appointment with us:</p>
-            
+        <div className="appointmentContact center">
+            <p className="left textContact"><h4>We would be happy to see you with us soon:</h4></p>
+            <button className="btnContact">Book an appoinment</button>
         </div>
       </div>
 

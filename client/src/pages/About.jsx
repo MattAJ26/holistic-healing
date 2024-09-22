@@ -1,4 +1,5 @@
 import headshot from '../assets/headshot.jpg';
+import '../style/AboutUs.css';
 
 export default function About() {
     return (
