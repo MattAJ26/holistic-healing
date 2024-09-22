@@ -15,9 +15,9 @@ export default defineConfig({
       },
     },
 
-    // watch: {
-    //   usePolling: true,
-    // },
+    watch: {
+      usePolling: true,
+    },
 
   }
   

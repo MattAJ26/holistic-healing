@@ -21,7 +21,7 @@ const resolvers = {
 },
 
 services: async () => {
-  return Service.find({}).populate('practitioner')
+  return Service.find({}).populate('practitioners')
 },
 
 roles: async () => {
@@ -114,8 +114,16 @@ user: async (parent, args) => {
       })
     },
     
-    addService: async (parent, {name, description, duration, price}) => {
+    addService: async (parent, {practitioner, name, description, duration, price}) => {
+
+       const practitionerData = await Practitioner.findOne({ _id: practitioner});
+
+            if (!practitionerData) {
+                throw new Error('Practitioner not found');
+            }
+
       return await Service.create({
+       practitioner: practitionerData,
       name, 
       description, 
       duration, 

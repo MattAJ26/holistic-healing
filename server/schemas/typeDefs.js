@@ -18,7 +18,7 @@ const typeDefs = gql`
     bio: String
     specialties: [String]
     certifications: [String]
-    availableDates: [Date]  # If you want these as Date objects
+    availableDates: [Date] 
     ratings: [Review]
   }
 
@@ -29,6 +29,7 @@ const typeDefs = gql`
     service: Service
     rating: Int!
     comment: String
+     createdAt: String!
   }
 
   type Role {
@@ -80,7 +81,8 @@ const typeDefs = gql`
 
     addUser(username: String!, email: String!, password: String!): User
 
-     addService(name: String!, description: String!, duration: Int!, price: Int!): Service
+     addService(practitioner: ID!,
+     name: String!, description: String!, duration: Int!, price: Int!): Service
 
 
 

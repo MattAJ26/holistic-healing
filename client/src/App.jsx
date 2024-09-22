@@ -30,18 +30,20 @@ const theme = extendTheme({ colors })
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    
 
 
     <ApolloProvider client={client}>
+      <ChakraProvider theme={theme}>
       {/* <Headers /> */}
       <NavTabs/>
       <div className="flex-column justify-center align-center min-100-vh bg-primary">
         
         <Outlet />
       </div>
+      </ChakraProvider>
     </ApolloProvider>
-        </ChakraProvider>
+        
   );
 }
 
