@@ -9,6 +9,10 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard/Dashboard.jsx'
+import DashboardServices from './pages/Dashboard/DashboardServices.jsx';
+import DashboardMembers from './pages/Dashboard/DashboardMembers.jsx';
+import DashboardAppointments from './pages/Dashboard/DashboardAppointments.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +31,24 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <Services />
+      },
+      {
+        path: 'dashboard',
+        element: <Dashboard />,
+        children: [
+          {
+            path: 'services', 
+            element: <DashboardServices />,
+          },
+          {
+            path: 'members',
+            element: <DashboardMembers />,
+          },
+          {
+            path: 'appointments',
+            element: <DashboardAppointments />,
+          },
+        ],
       },
       {
         path: '/contact',

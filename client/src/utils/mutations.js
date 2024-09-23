@@ -63,8 +63,8 @@ mutation createUser($username: String!, $email: String!, $password: String!) {
 `;
 
 export const CREATE_SERVICE = gql`
-mutation AddService($name: String!, $description: String!, $duration: Int!, $price: Int!) {
-  addService(name: $name, description: $description, duration: $duration, price: $price) {
+mutation AddService($practitioner: ID!, $name: String!, $description: String!, $duration: Int!, $price: Int!) {
+  addService(practitioner: $practitioner, name: $name, description: $description, duration: $duration, price: $price) {
     _id
     name
     description
@@ -74,13 +74,13 @@ mutation AddService($name: String!, $description: String!, $duration: Int!, $pri
       _id
       name
       bio
-      specialties
       certifications
       availableDates
     }
   }
 }
 `;
+
 
 export const UPDATE_USER = gql`
 mutation updateUser($updateUserId: ID!, $username: String!, $email: String!, $password: String!) {

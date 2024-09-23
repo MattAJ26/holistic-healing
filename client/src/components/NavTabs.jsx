@@ -19,6 +19,9 @@ export default function NavTabs({ links }) {
                 <div className="navLink">
                   <Link className="titleLink" to="/services">Services</Link>
                 </div>
+                 <div className="navLink">
+                  <Link className="titleLink" to="/dashboard">Dashboard</Link>
+                </div>
                 <div className="navLink">
                   <Link className="titleLink" to="/contact">Contact</Link>
                 </div>
