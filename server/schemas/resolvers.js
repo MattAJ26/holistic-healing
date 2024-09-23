@@ -1,4 +1,5 @@
 const { User, Appointment, Practitioner, Service, Review,Role } = require('../models');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   // query
@@ -107,11 +108,9 @@ user: async (parent, args) => {
     },
 
     addUser: async (parent, {username, email, password}) => {
-      return await User.create({
-      username,
-      email,
-      password
-      })
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
     },
     
     addService: async (parent, {practitioner, name, description, duration, price}) => {
@@ -188,7 +187,25 @@ user: async (parent, args) => {
       return Service.findOneAndDelete({ _id: serviceId });
     },
     
+    // Auth
 
+    login: async (parent, { email, password }, context) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
 
 
 
