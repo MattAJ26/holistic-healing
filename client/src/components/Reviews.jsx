@@ -19,7 +19,7 @@ const Reviews = () => {
       bg="gray.100"
       p={4}
       mt={6} 
-      pb={6}  // Added padding bottom
+      pb={6} 
     >
       <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
         See What Our Clients Say About Us

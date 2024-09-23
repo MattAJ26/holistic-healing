@@ -1,0 +1,38 @@
+/* dashboard.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body styling */
+body {
+    font-family: Arial, sans-serif; /* Replace with your preferred font */
+    line-height: 1.5;
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Light background color */
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Set all elements to have no margin or padding */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add any other global styles here */

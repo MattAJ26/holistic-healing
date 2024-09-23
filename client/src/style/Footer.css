@@ -1,0 +1,26 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 0rem;
+  background-color: #d6d5c9;
+}
+
+.social-icons a {
+  margin: 0 0.5rem; /* Adjust margin as needed */
+}
+
+.mainContainerfooter {
+  background-color: #d6d5c9;
+  font-family: #d6d5c9;
+  text-align: justify;
+}
+
+.mainContainerfooter p {
+  margin: 0 0.5rem; /* Adjust as needed */
+  line-height: 0.5; /* Tighter line spacing */
+}
+.footer-text p {
+  font-family: #d6d5c9;
+  font-size: 20px;
+  font-style: italic;
+}

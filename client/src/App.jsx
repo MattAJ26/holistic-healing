@@ -9,6 +9,7 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import * as ReactDOM from 'react-dom/client';
 import NavTabs from './components/NavTabs';
+import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -60,6 +61,7 @@ function App() {
         
         <Outlet />
       </div>
+      <Footer/>
       </ChakraProvider>
     </ApolloProvider>
         
