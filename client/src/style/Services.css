@@ -1,0 +1,10 @@
+.titleService {
+    border: solid 0px;
+    border-radius: 5px 5px 0 0;
+    background-color: #1b8445;
+    background: linear-gradient(180deg, #1b8445, #90b960);
+    color: #d6d5c9;
+    padding: 10px;
+    /* font-size: 10px; */
+}
+
