@@ -6,7 +6,7 @@ h1 {
 
 p {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .view {
@@ -46,6 +46,7 @@ p {
     color: #d6d5c9;
     padding: 10px;
     font-size: 40px;
+    font-style: normal;
 }
 
 .center {
@@ -81,6 +82,12 @@ p {
     word-break: break-all;
 }
 
+.bookAppContact {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+}
+
 .btnContact {
     padding: 10px;
     padding-left: 60px;
@@ -96,3 +103,4 @@ p {
 .btnContact:hover {
     opacity: 0.8;
 }
+

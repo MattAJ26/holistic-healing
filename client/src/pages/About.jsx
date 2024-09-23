@@ -16,7 +16,7 @@ export default function About() {
                   <p className="photoTextAbout">" ... Hi I’m Sabrina Johnson, the owner of Eir of Renewal! I’d like to introduce myself and talk a little bit about my business..."</p>
                 </div>
 
-                <div className="certifAbout">
+                {/* <div className="certifAbout">
                     <h2 className="sectionTitle">Certifications</h2>
                     <p>
                       <ul>
@@ -30,7 +30,7 @@ export default function About() {
                             </p>
                       </ul>
                     </p>
-                </div>
+                </div> */}
 
               </div>
 
@@ -48,20 +48,30 @@ export default function About() {
                   It wasn’t until 2020 that I decided to go into business officially. Since then I have met many wonderful individuals and have been furthering my education in the energy work sphere and in the foot zoning world. I still love to work on pregnant & postpartum clients, but also work on men.  
                   </p>
 
-                  <p>
-                  </p>
-
                 </div>
               </div>
 
-              {/* <div className="card-body m-5">
-                
-              </div> */}
+              
 
           </div>
 
-          {/* <div className="card-body m-5">
-          </div> */}
+          <div className="card-body m-5">
+                <div className="certifAbout">
+                      <h2 className="sectionTitle centerAlignm">Certifications</h2>
+                      <p>
+                        <ul>
+                            <h4>1. Reiki Certification:</h4>
+                              <p className="p-3 text">
+                                ICRT certified Master of Usui & Tibetan Reiki. Completed May 2019.
+                              </p>
+                            <h4>2. Foot Zone Certification:</h4>
+                              <p className="p-3 text">
+                                Academy of Foot Zone Therapy certified Practitioner. Completed August 2014.
+                              </p>
+                        </ul>
+                      </p>
+                </div>
+          </div>
 
         </div>
     );

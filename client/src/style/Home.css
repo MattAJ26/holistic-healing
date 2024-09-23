@@ -5,6 +5,7 @@ h2 {
 p {
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 25px;
 }
 
 ul {
@@ -12,7 +13,7 @@ ul {
 }
 
 li {
-    font-size: 20px;
+    font-size: 24px;
     font-style: italic;
     font-weight: 500;
     padding: 10px;
@@ -41,4 +42,7 @@ li {
     /* width: 65%; */
 }
 
+.textSize {
+    font-size: 25px;
+}
 
