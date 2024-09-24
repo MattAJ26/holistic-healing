@@ -55,6 +55,9 @@ const typeDefs = gql`
     roles: [Role]
   }
 
+
+
+
   type Query {
     
     appointments: [Appointment]
@@ -89,6 +92,7 @@ const typeDefs = gql`
      addService(practitioner: ID!,
      name: String!, description: String!, duration: Int!, price: Int!): Service
 
+  
 
 
 

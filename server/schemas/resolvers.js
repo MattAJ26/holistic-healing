@@ -1,4 +1,4 @@
-const { User, Appointment, Practitioner, Service, Review,Role } = require('../models');
+const { User, Appointment, Practitioner, Service, Review, Role } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -186,6 +186,8 @@ user: async (parent, args) => {
     deleteService: async (parent, { serviceId }) => {
       return Service.findOneAndDelete({ _id: serviceId });
     },
+
+  
     
     // Auth
 
