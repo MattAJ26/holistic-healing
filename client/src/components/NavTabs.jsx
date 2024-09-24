@@ -1,8 +1,16 @@
 import { color } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Auth from '../utils/auth';
 import './style/NavTabs.css';
 
-export default function NavTabs({ links }) {
+export default function NavTabs() {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+  const profile = Auth.getProfile();
+  const username = profile ? profile.data.username : '';  // Handle null case
+
   return (
     // <nav className="navbar navbar-expand-lg bg-secondary" style={styles.navContainer}>
     <nav className="navbar navbar-expand-lg bg-secondary" >
@@ -27,15 +35,31 @@ export default function NavTabs({ links }) {
                 </div>
             </div>
             <div className="leftHand navLink">
-                <div className="navLink">
+                {/* <div className="navLink">
                   <Link className="titleLink" to="/signup">Sign Up</Link>
-                </div>
+                </div> */}
                 <div className="navLink">
-                  <Link className="titleLink" to="/login">Login</Link>
+                  {Auth.loggedIn() ? (
+                    <>
+                    <span>Hey there, {username}!</span>
+                    <button className="btn btn-lg btn-light m-2" onClick={Auth.logout}>
+                      Logout
+                    </button>
+                    </>
+                 ) : (
+                     <>
+                   <Link className="btn btn-lg btn-info m-2" to="/login">
+                     Login
+                   </Link>
+                    <Link className="btn btn-lg btn-light m-2" to="/signup">
+                    Signup
+                   </Link>
+                    </>
+                  )}
                 </div>
-                <div className="navLink">
+                {/* <div className="navLink">
                   <Link className="titleLink" to="/logout">Logout</Link>
-                </div>
+                </div> */}
             </div>
           </div>
         </div>

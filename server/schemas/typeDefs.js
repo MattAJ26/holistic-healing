@@ -71,6 +71,11 @@ const typeDefs = gql`
     user(id: ID!): User
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Mutation {
 
  # create
@@ -79,7 +84,7 @@ const typeDefs = gql`
     
     addReview(user: ID!, rating: Int!, comment: String): Review
 
-    addUser(username: String!, email: String!, password: String!): User
+    addUser(username: String!, email: String!, password: String!): Auth
 
      addService(practitioner: ID!,
      name: String!, description: String!, duration: Int!, price: Int!): Service
@@ -104,6 +109,11 @@ const typeDefs = gql`
 removeUser(userId: ID!): User
 cancelAppointment(appointmentId: ID!): Appointment
 deleteService(serviceId: ID!): Service
+
+# auth
+
+login(email: String!, password: String!): Auth
+
 
   }
 `;
