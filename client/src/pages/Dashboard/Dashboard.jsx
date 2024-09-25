@@ -3,6 +3,7 @@ import { Box, Flex, Text, Stat, StatLabel, StatNumber, SimpleGrid, Spinner, Aler
 import SideNavBar from './SideNavBar';
 import { useQuery } from '@apollo/client';
 import { QUERY_SERVICES, QUERY_APPOINTMENTS, QUERY_PRACTITIONERS, QUERY_USERS } from '../../utils/queries';
+import Auth from '../../utils/auth';
 
 const Dashboard = () => {
   const styles = {
@@ -38,6 +39,18 @@ const Dashboard = () => {
   const totalAppointments = appointmentsData?.appointments?.length || 0;
   const activePractitioners = practitionersData?.practitioners?.length || 0;
   const totalMembers = membersData?.members?.length || 0; // Adjust this based on your actual data structure
+
+  // Get the user's role
+  const role = Auth.getProfile()?.data?.role;
+
+  // Role-based access control
+  if (role !== 'Admin') {
+    return (
+      <Box p={4}>
+        <Text>You do not have permission to view this dashboard.</Text>
+      </Box>
+     );
+  }
 
   return (
     <Flex style={styles}> 

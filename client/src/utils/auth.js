@@ -1,6 +1,6 @@
 import decode from 'jwt-decode';
 
-class AuthService {
+class Auth {
   getProfile() {
     try {
       const token = this.getToken();
@@ -47,4 +47,4 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+export default new Auth();

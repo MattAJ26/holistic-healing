@@ -3,20 +3,20 @@
     "username": "healingseeker01",
     "email": "seeker01@gmail.com",
     "password": "password123",
-    "roles": [] 
+    "role": "Client"
   },
 
   {
     "username": "naturelover99",
     "email": "lover99@gmail.com",
     "password": "natureheal99",
-    "roles": []
+    "role": "Client"
   },
 
   {
     "username": "meditationguru",
     "email": "guru@gmail.com",
     "password": "meditation2024",
-    "roles": []
+    "role": "Client"
   }
 ]
