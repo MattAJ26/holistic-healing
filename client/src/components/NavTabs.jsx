@@ -162,7 +162,7 @@ export default function NavTabs() {
 
       <Flex
         w="100vw"
-        bgColor="gray.50"
+        bgColor="#1b8445"
         zIndex={20}
         h="100vh"
         pos="fixed"
@@ -254,22 +254,56 @@ export default function NavTabs() {
       {/* The login-signup Menu: */}
 
       <Flex
+        justify="flex-end"
+        align="center"
+        direction="row"
         className="login"
       >
       {Auth.loggedIn() ? (
                   <>
-                  <span>Hey there, {username}!</span>
-                  <button className="btn btn-lg btn-light m-2" onClick={Auth.logout}>
+                  <Text color="#d6d5c9" fontSize="25px">Hey there, {username}!</Text>
+                  <Button
+                  _hover={{ color: '#d6d5c9'}}
+                      fontSize="25px"
+                      color="#d6d5c9"
+                      as="a"
+                      variant="ghost"
+                      aria-lable="Logout"
+                      m={5}
+                      // w="100%"
+                     onClick={Auth.logout}>
                     Logout
-                  </button>
+                  </Button>
                   </>
                 ) : (
                     <>
-                  <Link className="btn btn-lg btn-info m-2" to="/login">
+                  <Link to="/login">
+                  <Button
+                  _hover={{ color: '#d6d5c9'}}
+                      fontSize="25px"
+                      color="#d6d5c9"
+                      as="a"
+                      variant="ghost"
+                      aria-lable="Login"
+                      m={5}
+                      w="auto"
+                    >
                     Login
+                    </Button>
                   </Link>
-                  <Link className="btn btn-lg btn-light m-2" to="/signup">
+                  <Link to="/signup">
+                  <Button
+                  _hover={{ color: '#d6d5c9'}}
+                      fontSize="25px"
+                      color="#d6d5c9"
+                      as="a"
+                      variant="ghost"
+                      aria-lable="Signup"
+                      m={5}
+                      w="auto"
+                    >
                   Signup
+                  </Button>
                   </Link>
                   </>
                 )}

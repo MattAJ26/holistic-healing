@@ -47,7 +47,7 @@ const Dashboard = () => {
   // Role-based access control
   if (role !== 'Admin') {
     return (
-      <Box p={4}>
+      <Box className="card mainContainer card-rounded w-75 text-center">
         <Text>You do not have permission to view this dashboard.</Text>
       </Box>
      );
