@@ -32,11 +32,11 @@ const typeDefs = gql`
      createdAt: String!
   }
 
-  type Role {
-    _id: ID
-    name: String
-    description: String
-  }
+  # type Role {
+  #   _id: ID
+  #   name: String!
+  #   description: String
+  # }
 
   type Service {
     _id: ID
@@ -48,11 +48,11 @@ const typeDefs = gql`
   }
 
   type User {
-    _id: ID
-    username: String
-    email: String
-    password: String
-    roles: [Role]
+    _id: ID!
+    username: String!
+    email: String!
+    password: String!
+    role: String!
   }
 
 
@@ -63,13 +63,13 @@ const typeDefs = gql`
     appointments: [Appointment]
     practitioners: [Practitioner]
     reviews: [Review]
-    roles: [Role]
+    # roles: [Role]
     services: [Service]
     users: [User]
 
     appointment(id: ID!): Appointment
     practitioner(id: ID!): Practitioner
-    role(id: ID!): Role
+    # role(id: ID!): Role
     service(id: ID!): Service
     user(id: ID!): User
   }
@@ -92,7 +92,7 @@ const typeDefs = gql`
      addService(practitioner: ID!,
      name: String!, description: String!, duration: Int!, price: Int!): Service
 
-  
+    #  createAdminUser(username: String!, email: String!, password: String!): Auth!
 
 
 
@@ -114,7 +114,7 @@ removeUser(userId: ID!): User
 cancelAppointment(appointmentId: ID!): Appointment
 deleteService(serviceId: ID!): Service
 
-# auth
+# auth-login
 
 login(email: String!, password: String!): Auth
 

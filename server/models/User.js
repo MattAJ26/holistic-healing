@@ -36,12 +36,18 @@ const userSchema = new Schema({
     },
   },
 
-  roles: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Role',
-    },
-  ],
+  role: {
+    type: String,
+    enum: ['Client', 'Admin', 'Practitioner'],
+    default: 'Client'
+  },
+  
+  // [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Role',
+  //   },
+  // ],
 
   createdAt: {
     type: Date,

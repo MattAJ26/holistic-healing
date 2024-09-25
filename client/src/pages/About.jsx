@@ -46,8 +46,6 @@ export default function About() {
 
                 </div>
           </div>
-
-
         </GridItem>
         <GridItem 
           colSpan={4} 
@@ -66,15 +64,10 @@ export default function About() {
           <p className="p-3" fontSize="15px">
             Academy of Foot Zone Therapy certified Practitioner. Completed August 2014.
           </p>
-
-
         </GridItem>
 
     </Grid>
-
-
   );
-
 };
 
   
