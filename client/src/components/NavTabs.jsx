@@ -29,6 +29,7 @@ export default function NavTabs() {
 // using Chakra==============
   return (
     <Flex 
+      className="navTabsContainer"
       bg="#1b8445"
     >
 
@@ -252,7 +253,9 @@ export default function NavTabs() {
 
       {/* The login-signup Menu: */}
 
-      <Flex>
+      <Flex
+        className="login"
+      >
       {Auth.loggedIn() ? (
                   <>
                   <span>Hey there, {username}!</span>
