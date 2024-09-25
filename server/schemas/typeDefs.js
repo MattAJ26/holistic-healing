@@ -55,6 +55,9 @@ const typeDefs = gql`
     role: String!
   }
 
+
+
+
   type Query {
     
     appointments: [Appointment]

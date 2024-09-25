@@ -186,6 +186,8 @@ user: async (parent, args) => {
     deleteService: async (parent, { serviceId }) => {
       return Service.findOneAndDelete({ _id: serviceId });
     },
+
+  
     
     // Auth
 
