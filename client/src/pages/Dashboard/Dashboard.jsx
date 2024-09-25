@@ -11,7 +11,7 @@ const Dashboard = () => {
     padding: 0,
     backgroundColor: 'white',
     width: '100%',
-    height: '290vh',
+    height: 'auto',
   };
 
   // Fetch data for services, appointments, practitioners, and members
@@ -47,7 +47,7 @@ const Dashboard = () => {
   // Role-based access control
   if (role !== 'Admin') {
     return (
-      <Box p={4}>
+      <Box className="card mainContainer card-rounded w-75 text-center">
         <Text>You do not have permission to view this dashboard.</Text>
       </Box>
      );

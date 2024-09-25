@@ -22,8 +22,8 @@ export default function Services() {
   }
 
   return (
-    <Container as="section" maxWidth="container.xl" mt={6} p={8} bg="white" borderRadius="lg" shadow="lg">
-      <Heading as="h2" size="lg" mb={6} textAlign="center" color="black" fontFamily="serif" letterSpacing="wider">
+    <Container as="section" maxWidth="container.xl" mt={6} p={8} bg="#d6d5c9" borderRadius="lg" shadow="lg">
+      <Heading as="h2" size="lg" mb={6} textAlign="center" color="black" fontFamily="var(--chakra-fonts-body)" letterSpacing="wider">
         Our Luxury Services
       </Heading>
       <div className="card-body m-5">
@@ -40,7 +40,7 @@ export default function Services() {
               _hover={{ shadow: '2xl', transform: 'translateY(-5px)', transition: '0.3s ease-in-out' }}
               mx="auto"
             >
-              <Heading fontSize="xl" textAlign="center" className="titleService" fontFamily="serif" color="black">
+              <Heading fontSize="xl" textAlign="center" className="titleService" fontFamily="var(--chakra-fonts-body)" color="black">
                 {service.name}
               </Heading>
               <Text mt={4} color="gray.600" fontWeight="medium" textAlign="center">
@@ -58,7 +58,7 @@ export default function Services() {
                 {service.practitioners.length} Practitioner(s)
               </Badge>
               <Box mt={6}>
-                <Heading size="sm" textTransform="uppercase" fontFamily="serif" color="black" mb={2}>
+                <Heading size="sm" textTransform="uppercase" fontFamily="var(--chakra-fonts-body)" color="black" mb={2}>
                   Practitioners
                 </Heading>
                 {service.practitioners.map((practitioner) => (

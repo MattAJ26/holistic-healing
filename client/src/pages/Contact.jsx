@@ -50,7 +50,7 @@ const Contact = () => {
         align="center"
         p={8}
         mt={10}
-        bg="gray.50"
+        bg="#d6d5c9"
       >
        
         <Box
