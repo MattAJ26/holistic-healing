@@ -3,6 +3,7 @@ import { Box, Flex, Text, Stat, StatLabel, StatNumber, SimpleGrid, Spinner, Aler
 import SideNavBar from './SideNavBar';
 import { useQuery } from '@apollo/client';
 import { QUERY_SERVICES, QUERY_APPOINTMENTS, QUERY_PRACTITIONERS, QUERY_USERS } from '../../utils/queries';
+import Auth from '../../utils/auth';
 
 const Dashboard = () => {
   const styles = {
@@ -25,19 +26,32 @@ const Dashboard = () => {
   }
 
   // Handle errors
-  if (errorServices || errorAppointments || errorPractitioners || errorMembers) {
-    return (
-      <Alert status="error">
-        <Text>An error occurred while fetching data.</Text>
-      </Alert>
-    );
-  }
+  // if (!errorServices || !errorAppointments || !errorPractitioners || !errorMembers) {
+  //   return (
+  //     <Alert status="error">
+  //       <Text>An error occurred while fetching data.</Text>
+  //     </Alert>
+  //   );
+  // }
 
   // Get the total counts from the fetched data, using optional chaining
   const totalServices = servicesData?.services?.length || 0;
   const totalAppointments = appointmentsData?.appointments?.length || 0;
   const activePractitioners = practitionersData?.practitioners?.length || 0;
   const totalMembers = membersData?.members?.length || 0; // Adjust this based on your actual data structure
+
+  // Get the user's role
+  const role = Auth.getProfile()?.data?.role;
+  console.log(role);
+
+  // Role-based access control
+  if (role !== 'Admin') {
+    return (
+      <Box p={4}>
+        <Text>You do not have permission to view this dashboard.</Text>
+      </Box>
+     );
+  }
 
   return (
     <Flex style={styles}> 

@@ -1,4 +1,4 @@
-const { User, Appointment, Practitioner, Service, Review, Role } = require('../models');
+const { User, Appointment, Practitioner, Service, Review } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -25,9 +25,9 @@ services: async () => {
   return Service.find({}).populate('practitioners')
 },
 
-roles: async () => {
-  return Role.find({});
-},
+// roles: async () => {
+//   return Role.find({});
+// },
 
 reviews: async () => {
   return Review.find({}).populate('practitioner').populate('service');
@@ -58,9 +58,9 @@ practitioner: async (parent, args) => {
   return Practitioner.findById(args.id);
 },
 
-role: async (parent, args) => {
-  return Role.findById(args.id);
-},
+// role: async (parent, args) => {
+//   return Role.findById(args.id);
+// },
 
 service: async (parent, args) => {
   return Service.findById(args.id).populate('practitioners')
@@ -205,12 +205,10 @@ user: async (parent, args) => {
       }
 
       const token = signToken(user);
+      console.log('Generated Token:', token); // Log the token
 
       return { token, user };
     },
-
-
-
 
   },
 

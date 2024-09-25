@@ -54,6 +54,7 @@ export const LOGIN_USER = gql`
       user {
         _id
         username
+        role
       }
     }
   }
@@ -67,11 +68,12 @@ mutation createUser($username: String!, $email: String!, $password: String!) {
       _id
       username
       email
-    roles {
-      _id
-      name
-      description
-      }
+      role
+    # roles {
+    #   _id
+    #   name
+    #   description
+    #   }
     }
   }
 }
@@ -104,11 +106,7 @@ mutation updateUser($updateUserId: ID!, $username: String!, $email: String!, $pa
     username
     email
     password
-    roles {
-      _id
-      name
-      description
-    }
+    role
   }
 }
 `;
@@ -120,11 +118,7 @@ mutation Mutation($updateAppointmentId: ID!, $appointmentDate: Date!, $notes: St
     user {
       username
       email
-      roles {
-        name
-        _id
-        description
-      }
+      role
     }
     practitioner {
       name
@@ -184,11 +178,7 @@ mutation CancelAppointment($appointmentId: ID!) {
     user {
       username
       email
-      roles {
-        name
-        _id
-        description
-      }
+      role
     }
     appointmentDate
     notes
@@ -207,11 +197,7 @@ mutation RemoveUser($userId: ID!) {
     _id
     username
     email
-    roles {
-      _id
-      name
-      description
-    }
+    role
   }
 }
 `;
