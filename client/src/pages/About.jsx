@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <Grid
-      h='1000px'
+      h='auto'
       w='80%'
       templateRows='repeat(2, 1fr)'
       templateColumns='repeat(5, 1fr)'
@@ -26,7 +26,7 @@ export default function About() {
         <GridItem 
           colSpan={4} 
           bg='#d6d5c9'
-          p={10}
+          p={5}
           borderRadius="10px"
         >
 
@@ -50,14 +50,14 @@ export default function About() {
         <GridItem 
           colSpan={4} 
           bg='#d6d5c9' 
-          p={10}
+          p={5}
           borderRadius="10px"
         >
 
           <h2 className="sectionTitle">Certifications</h2>
 
           <h4>1. Reiki Certification:</h4>
-          <p className="p-3" fontSize="15px"v>
+          <p className="p-3" fontSize="15px">
             ICRT certified Master of Usui & Tibetan Reiki. Completed May 2019.
           </p>
           <h4>2. Foot Zone Certification:</h4>
