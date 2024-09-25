@@ -11,7 +11,7 @@ const Dashboard = () => {
     padding: 0,
     backgroundColor: 'white',
     width: '100%',
-    height: '100vh',
+    height: '290vh',
   };
 
   // Fetch data for services, appointments, practitioners, and members
