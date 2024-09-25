@@ -26,13 +26,13 @@ const Dashboard = () => {
   }
 
   // Handle errors
-  if (errorServices || errorAppointments || errorPractitioners || errorMembers) {
-    return (
-      <Alert status="error">
-        <Text>An error occurred while fetching data.</Text>
-      </Alert>
-    );
-  }
+  // if (!errorServices || !errorAppointments || !errorPractitioners || !errorMembers) {
+  //   return (
+  //     <Alert status="error">
+  //       <Text>An error occurred while fetching data.</Text>
+  //     </Alert>
+  //   );
+  // }
 
   // Get the total counts from the fetched data, using optional chaining
   const totalServices = servicesData?.services?.length || 0;
@@ -42,6 +42,7 @@ const Dashboard = () => {
 
   // Get the user's role
   const role = Auth.getProfile()?.data?.role;
+  console.log(role);
 
   // Role-based access control
   if (role !== 'Admin') {

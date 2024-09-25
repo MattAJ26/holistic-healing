@@ -20,16 +20,38 @@ db.once('open', async () => {
   //await cleanDB('Role', 'roles');
 
 
-  // Create an admin user
-  const adminUser = {
-    username: 'admin',
-    email: 'admin@example.com',
-    password: await bcrypt.hash('adminpassword', 10), // Hash the password
-    role: 'Admin', // Set the role for admin user
-  };
+  const users = [
+    {
+      username: 'admin',
+      email: 'admin@example.com',
+      password: await bcrypt.hash('adminpassword', 10), // Hash the password
+      role: 'Admin', // Set the role for admin user
+    },
+    {
+      username: "healingseeker01",
+      email: "seeker01@gmail.com",
+      password: await bcrypt.hash("password123", 10),
+      role: "Client"
+    },
+  
+    {
+      username: "naturelover99",
+      email: "lover99@gmail.com",
+      password: await bcrypt.hash("natureheal99", 10),
+      role: "Client"
+    },
+  
+    {
+      username: "meditationguru",
+      email: "guru@gmail.com",
+      password: await bcrypt.hash("meditation2024", 10),
+      role: "Client"
+    }
+  ]
+  
 
   // Insert the admin user and normal users
-  await User.insertMany([adminUser, ...UserData]);
+  await User.insertMany(users);
   await Practitioner.insertMany(PractitionerData);
   await Service.insertMany(ServiceData);
   await Appointment.insertMany(AppointmentData);
