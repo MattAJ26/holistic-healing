@@ -41,10 +41,21 @@ Technologies Used:      Frontend Framework: React
                         Styling/Icons: React Icons
 
 
-Resources: 
+Resources:              https://v2.chakra-ui.com/docs/components/tabs/usage
+                        https://v2.chakra-ui.com/docs/components/grid/usage  
+                        https://www.emailjs.com/docs/examples/reactjs/    
 
                   
 Collaborators:          Shobha Ganesh [sgforcert@gmail.com]
                         Matt Johnson [mattajohnson26@gmail.com]
                         Olivier Ndicunguye [nolivanoly@gmail.com]
-                        Maryna Martseniuk  [marina.ved80@gmail.com]       
+                        Maryna Martseniuk  [marina.ved80@gmail.com]   
+
+
+LINKS
+                    
+                        
+DEPLOYED  : https://holistic-healing.onrender.com/dashboard
+GITHUB REPO : https://github.com/MattAJ26/holistic-healing
+                            
+![Image](client/public/EIR.png)
